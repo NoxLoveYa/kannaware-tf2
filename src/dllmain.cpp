@@ -3,14 +3,20 @@
 
 #include <thread>
 #include <cstdint>
+#include <iostream>	
 
 #include "hooks.h"
+#include "../ext/sdk/interfaces/interfaces.h"
 
 void Setup(const HMODULE instance)
 {
 	try
 	{
+		AllocConsole();
+		FILE* file = new FILE();
+		freopen_s(&file, "CONOUT$", "w", stdout);
 		gui::Setup();
+		interfaces::SetupInterfaces();
 		hooks::Setup();
 	}
 	catch (const std::exception& error)
@@ -27,7 +33,9 @@ void Setup(const HMODULE instance)
 	}
 
 	while (!GetAsyncKeyState(VK_END))
+	{
 		std::this_thread::sleep_for(std::chrono::milliseconds(200));
+	}
 
 UNLOAD:
 	hooks::Destroy();

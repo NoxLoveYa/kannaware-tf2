@@ -155,6 +155,13 @@
     <ClInclude Include="ext\minhook\hde\table64.h" />
     <ClInclude Include="ext\minhook\minhook.h" />
     <ClInclude Include="ext\minhook\trampoline.h" />
+    <ClInclude Include="ext\sdk\class\ClientClass.h" />
+    <ClInclude Include="ext\sdk\interfaces\IClientEntity.h" />
+    <ClInclude Include="ext\sdk\interfaces\IClientEntityList.h" />
+    <ClInclude Include="ext\sdk\interfaces\IClientNetworkable.h" />
+    <ClInclude Include="ext\sdk\interfaces\interfaces.h" />
+    <ClInclude Include="ext\sdk\math\math.h" />
+    <ClInclude Include="ext\sdk\types\types.h" />
     <ClInclude Include="src\features\esp.h" />
     <ClInclude Include="src\features\vars.h" />
     <ClInclude Include="src\gui.h" />
@@ -173,6 +180,7 @@
     <ClCompile Include="ext\minhook\hde\hde64.c" />
     <ClCompile Include="ext\minhook\hook.c" />
     <ClCompile Include="ext\minhook\trampoline.c" />
+    <ClCompile Include="ext\sdk\interfaces\interfaces.cpp" />
     <ClCompile Include="src\dllmain.cpp" />
     <ClCompile Include="src\features\esp.cpp" />
     <ClCompile Include="src\features\vars.cpp" />
